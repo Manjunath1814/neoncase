@@ -6,7 +6,76 @@
 /* -------------------------
    BASIC RESET
 -------------------------- */
+/* =========================================================
+   FULL SCREEN SAMPLE WATERMARK
+========================================================= */
 
+.sample-watermark {
+    position: fixed;
+
+    inset: -20%;
+
+    width: 140%;
+    height: 140%;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    transform: rotate(-25deg);
+
+    overflow: hidden;
+
+    opacity: 0.075;
+}
+
+
+.watermark-row {
+    width: 100%;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    color: #000000;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    word-spacing: 10px;
+
+    text-transform: uppercase;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sample-watermark {
+        transform: rotate(-25deg);
+    }
+
+    .watermark-row {
+        font-size: 18px;
+
+        letter-spacing: 3px;
+
+        word-spacing: 6px;
+    }
+
+}
 * {
     margin: 0;
     padding: 0;
